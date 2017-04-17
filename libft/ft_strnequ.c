@@ -1,19 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   include.h                                          :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ionofrei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/17 12:45:38 by ionofrei          #+#    #+#             */
-/*   Updated: 2017/04/17 12:48:10 by ionofrei         ###   ########.fr       */
+/*   Created: 2017/04/17 12:57:28 by ionofrei          #+#    #+#             */
+/*   Updated: 2017/04/17 12:58:45 by ionofrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __INCLUDE_H
-# define __INCLUDE_H
+#include "libft.h"
 
-# include "libft.h"
-# include "printf.h"
-
-#endif
+int		ft_strnequ(char const *s1, char const *s2, size_t n)
+{
+	if (s1 && s2)
+		return (ft_strncmp(s1, s2, n) ? 0 : 1);
+	return (0);
+}

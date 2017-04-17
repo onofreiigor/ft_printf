@@ -1,19 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   include.h                                          :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ionofrei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/17 12:45:38 by ionofrei          #+#    #+#             */
-/*   Updated: 2017/04/17 12:48:10 by ionofrei         ###   ########.fr       */
+/*   Created: 2017/04/17 12:57:35 by ionofrei          #+#    #+#             */
+/*   Updated: 2017/04/17 12:58:50 by ionofrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __INCLUDE_H
-# define __INCLUDE_H
+#include "libft.h"
 
-# include "libft.h"
-# include "printf.h"
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
+{
+	char *res;
+	char *temp;
 
-#endif
+	res = NULL;
+	if (s)
+	{
+		if ((res = (char *)malloc(sizeof(char) * (len + 1))))
+		{
+			temp = res;
+			while (*(s + start) && len--)
+				*temp++ = *(s + start++);
+			*temp = '\0';
+		}
+	}
+	return (res);
+}

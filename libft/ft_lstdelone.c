@@ -1,19 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   include.h                                          :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ionofrei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/17 12:45:38 by ionofrei          #+#    #+#             */
-/*   Updated: 2017/04/17 12:48:10 by ionofrei         ###   ########.fr       */
+/*   Created: 2017/04/17 12:56:07 by ionofrei          #+#    #+#             */
+/*   Updated: 2017/04/17 12:58:44 by ionofrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __INCLUDE_H
-# define __INCLUDE_H
+#include "libft.h"
 
-# include "libft.h"
-# include "printf.h"
-
-#endif
+void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
+{
+	del((*alst)->content, (*alst)->content_size);
+	free(*alst);
+	*alst = NULL;
+}

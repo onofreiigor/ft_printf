@@ -1,19 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   include.h                                          :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ionofrei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/17 12:45:38 by ionofrei          #+#    #+#             */
-/*   Updated: 2017/04/17 12:48:10 by ionofrei         ###   ########.fr       */
+/*   Created: 2017/04/17 12:57:29 by ionofrei          #+#    #+#             */
+/*   Updated: 2017/04/17 12:58:48 by ionofrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __INCLUDE_H
-# define __INCLUDE_H
+#include "libft.h"
 
-# include "libft.h"
-# include "printf.h"
+char	*ft_strnew(size_t size)
+{
+	char *temp;
 
-#endif
+	if ((temp = (char *)malloc(size + 1)))
+		ft_bzero(temp, size + 1);
+	return (temp);
+}

@@ -1,19 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   include.h                                          :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ionofrei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/17 12:45:38 by ionofrei          #+#    #+#             */
-/*   Updated: 2017/04/17 12:48:10 by ionofrei         ###   ########.fr       */
+/*   Created: 2017/04/17 12:55:55 by ionofrei          #+#    #+#             */
+/*   Updated: 2017/04/17 12:58:44 by ionofrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __INCLUDE_H
-# define __INCLUDE_H
+#include "libft.h"
 
-# include "libft.h"
-# include "printf.h"
-
-#endif
+int		ft_isascii(int c)
+{
+	if (c >= 0 && c <= 127)
+		return (1);
+	return (0);
+}

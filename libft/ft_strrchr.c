@@ -1,19 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   include.h                                          :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ionofrei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/17 12:45:38 by ionofrei          #+#    #+#             */
-/*   Updated: 2017/04/17 12:48:10 by ionofrei         ###   ########.fr       */
+/*   Created: 2017/04/17 12:57:32 by ionofrei          #+#    #+#             */
+/*   Updated: 2017/04/17 12:58:49 by ionofrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __INCLUDE_H
-# define __INCLUDE_H
+#include "libft.h"
 
-# include "libft.h"
-# include "printf.h"
+char	*ft_strrchr(const char *str, int c)
+{
+	char			*res;
+	unsigned int	index;
 
-#endif
+	index = 0;
+	res = NULL;
+	if (*str == (char)c)
+		res = (char *)str;
+	while (*str++)
+	{
+		if (*str == (char)c)
+			res = (char *)str;
+	}
+	return (res);
+}

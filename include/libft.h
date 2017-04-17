@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: okosiako <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ionofrei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/28 13:30:46 by okosiako          #+#    #+#             */
-/*   Updated: 2017/01/30 13:36:16 by okosiako         ###   ########.fr       */
+/*   Created: 2017/04/17 12:47:45 by ionofrei          #+#    #+#             */
+/*   Updated: 2017/04/17 12:48:20 by ionofrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef __LIBFT_H
+# define __LIBFT_H
 
 # include <stdlib.h>
 # include <unistd.h>

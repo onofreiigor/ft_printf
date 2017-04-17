@@ -1,19 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   include.h                                          :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ionofrei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/17 12:45:38 by ionofrei          #+#    #+#             */
-/*   Updated: 2017/04/17 12:48:10 by ionofrei         ###   ########.fr       */
+/*   Created: 2017/04/17 12:56:26 by ionofrei          #+#    #+#             */
+/*   Updated: 2017/04/17 12:58:44 by ionofrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __INCLUDE_H
-# define __INCLUDE_H
+#include "libft.h"
 
-# include "libft.h"
-# include "printf.h"
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+{
+	unsigned char	*ds;
+	unsigned char	*sr;
+	unsigned int	index;
 
-#endif
+	ds = dest;
+	sr = (unsigned char *)src;
+	index = 0;
+	while (index < n)
+	{
+		if (sr[index] != (unsigned char)c)
+		{
+			ds[index] = sr[index];
+			index++;
+		}
+		else
+		{
+			ds[index] = (unsigned char)c;
+			return (&ds[++index]);
+		}
+	}
+	return (NULL);
+}

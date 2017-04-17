@@ -1,19 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   include.h                                          :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ionofrei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/17 12:45:38 by ionofrei          #+#    #+#             */
-/*   Updated: 2017/04/17 12:48:10 by ionofrei         ###   ########.fr       */
+/*   Created: 2017/04/17 12:56:11 by ionofrei          #+#    #+#             */
+/*   Updated: 2017/04/17 12:58:44 by ionofrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __INCLUDE_H
-# define __INCLUDE_H
+#include "libft.h"
 
-# include "libft.h"
-# include "printf.h"
+void	ft_lstlast(t_list **alst, void *content, size_t size_content)
+{
+	t_list *temp;
+	t_list *new_elem;
 
-#endif
+	new_elem = ft_lstnew(content, size_content);
+	if (!*alst)
+		*alst = new_elem;
+	temp = *alst;
+	while (temp->next)
+		temp = temp->next;
+	temp->next = new_elem;
+}

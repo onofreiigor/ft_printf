@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   printf.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: okosiako <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ionofrei <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/21 16:52:57 by okosiako          #+#    #+#             */
-/*   Updated: 2017/02/21 16:54:10 by okosiako         ###   ########.fr       */
+/*   Created: 2017/04/17 12:47:51 by ionofrei          #+#    #+#             */
+/*   Updated: 2017/04/17 12:47:58 by ionofrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINTF_H
-# define PRINTF_H
+#ifndef __PRINTF_H
+# define __PRINTF_H
 
 # define CONV "duoxsScCp%DUOXi"
 
