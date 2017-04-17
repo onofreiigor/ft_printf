@@ -12,7 +12,7 @@
 
 #include "include.h"
 
-void		ft_s(const char *format, t_param *elem, va_list param)
+void		ft_print_str(const char *format, t_param *elem, va_list param)
 {
 	char		*res;
 	wchar_t		*wres;
@@ -39,7 +39,7 @@ void		ft_s(const char *format, t_param *elem, va_list param)
 	}
 }
 
-void		ft_c(const char *format, t_param *elem, va_list param)
+void		ft_print_char(const char *format, t_param *elem, va_list param)
 {
 	wchar_t	wch;
 	char	ch;

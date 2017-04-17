@@ -39,7 +39,7 @@ intmax_t	ft_data(const char *format, t_param *elem, va_list param)
 	}
 }
 
-void		ft_di(const char *format, t_param *elem, va_list param)
+void		ft_int_decimal(const char *format, t_param *elem, va_list param)
 {
 	long long		num;
 
@@ -54,7 +54,7 @@ void		ft_di(const char *format, t_param *elem, va_list param)
 	COUNTER(num, 10, elem->res);
 }
 
-uintmax_t	ft_data_x(const char *format, t_param *elem, va_list param)
+uintmax_t	ft_hexa_data(const char *format, t_param *elem, va_list param)
 {
 	if (ft_strcmp(ft_strchr(format, 'h'), ft_strrchr(format, 'h')) ||
 			ft_strcmp(ft_strchr(format, 'l'), ft_strrchr(format, 'l')))
@@ -72,13 +72,13 @@ uintmax_t	ft_data_x(const char *format, t_param *elem, va_list param)
 		return (va_arg(param, unsigned int));
 }
 
-void		ft_xopu(const char *format, t_param *elem, va_list param)
+void		ft_hexa_format(const char *format, t_param *elem, va_list param)
 {
 	size_t		addr;
 	char		*res;
 
 	res = NULL;
-	addr = ft_data_x(format, elem, param);
+	addr = ft_hexa_data(format, elem, param);
 	if (addr || (!addr && !ft_strchr(format, '.')))
 	{
 		if (ft_strchr("xp", elem->type))

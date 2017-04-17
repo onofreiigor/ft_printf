@@ -12,7 +12,7 @@
 
 #include "include.h"
 
-void	ft_choose(const char *format, char **temp)
+void	ft_select(const char *format, char **temp)
 {
 	size_t	index;
 
@@ -59,8 +59,8 @@ int		ft_printf(const char *restrict format, ...)
 		}
 		else
 		{
-			ft_choose(&format[index], &temp);
-			val += ft_conv(temp, param);
+			ft_select(&format[index], &temp);
+			val += ft_to_string(temp, param);
 			index += ft_strlen(temp) - 1;
 			ft_memdel((void**)&temp);
 		}

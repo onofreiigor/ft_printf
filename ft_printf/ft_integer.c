@@ -12,7 +12,7 @@
 
 #include "include.h"
 
-char	*ft_addstr(char *dest, char src)
+char	*ft_concat_str(char *dest, char src)
 {
 	char	*trash;
 
@@ -23,7 +23,7 @@ char	*ft_addstr(char *dest, char src)
 	return (trash);
 }
 
-char	*ft_wp(const char *format, int *par)
+char	*ft_prec_width(const char *format, int *par)
 {
 	size_t	a;
 	char	*res;
@@ -34,7 +34,7 @@ char	*ft_wp(const char *format, int *par)
 	{
 		if (ft_strchr("%+- #", format[a]))
 		{
-			res = ft_addstr(res, format[a]);
+			res = ft_concat_str(res, format[a]);
 			if (ft_isdigit(format[a + 1]) && ft_atoi(format + a + 1) > 0)
 				par[0] = ft_atoi(format + a + 1);
 		}
@@ -42,10 +42,10 @@ char	*ft_wp(const char *format, int *par)
 	}
 	par[1] = ft_strrchr(format, '.') ? ft_atoi(ft_strrchr(format, '.') + 1) : 0;
 	if (ft_strchr(format, '.'))
-		res = ft_addstr(res, '.');
+		res = ft_concat_str(res, '.');
 	a = -1;
 	while (ft_strchr(&format[++a], '0'))
 		if (!ft_isdigit(format[ft_strchr(format + a, '0') - format - 1]))
-			return (res = ft_addstr(res, '0'));
+			return (res = ft_concat_str(res, '0'));
 	return (res);
 }

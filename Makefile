@@ -71,14 +71,14 @@ SRC_LIBFT =\
 	$(FOLDER_LIBFT)/ft_wputchar.c
 
 SRC_PRINTF =\
-	$(FOLDER_PRINTF)/ft_con.c\
-	$(FOLDER_PRINTF)/ft_con_sc.c\
-	$(FOLDER_PRINTF)/ft_convers.c\
-	$(FOLDER_PRINTF)/ft_param_make.c\
-	$(FOLDER_PRINTF)/ft_precis.c\
+	$(FOLDER_PRINTF)/ft_to_string.c\
+	$(FOLDER_PRINTF)/ft_to_string2.c\
+	$(FOLDER_PRINTF)/ft_to_string3.c\
+	$(FOLDER_PRINTF)/ft_read_func.c\
+	$(FOLDER_PRINTF)/ft_integer.c\
 	$(FOLDER_PRINTF)/ft_printf.c
 
-HEADER = include
+HEADER = includes
 
 all: $(NAME)
 $(NAME):

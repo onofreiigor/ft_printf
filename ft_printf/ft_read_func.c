@@ -67,7 +67,7 @@ int			ft_print(int *par, t_param *e)
 	return (res);
 }
 
-int			ft_make_elem(int *par, t_param *e)
+int			ft_create_elem(int *par, t_param *e)
 {
 	int res;
 
