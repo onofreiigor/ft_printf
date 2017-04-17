@@ -78,7 +78,7 @@ SRC_PRINTF =\
 	$(FOLDER_PRINTF)/ft_integer.c\
 	$(FOLDER_PRINTF)/ft_printf.c
 
-HEADER = includes
+HEADER = include
 
 all: $(NAME)
 $(NAME):
